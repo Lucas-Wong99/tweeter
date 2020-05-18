@@ -1,9 +1,15 @@
 header {
   background-color: #d89922;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+header div h2 {
+  color: white;
+  margin-top: 0;
 }

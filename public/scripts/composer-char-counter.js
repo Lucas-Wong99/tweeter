@@ -25,15 +25,14 @@ $(document).ready(function() {
 
   $node.next().find('.counter').text(function () {
     if (140 - nodeLength < 0) {
-      $(this).css('color', 'red');
+      $(this).addClass('red');
       return 140 - nodeLength;
     } else if (140 - nodeLength > 0){
-      $(this).css('color', '#545149')
-      return 140 - nodeLength
+      $(this).removeClass('red');
+      return 140 - nodeLength;
     }
   });
   
-
 });
 
 

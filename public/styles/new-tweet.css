@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-button button {
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  cursor: pointer;
+}
+
+textarea {
+  background: transparent;
+  resize: none;
+  outline: none;
+  border: 0;
+  border-bottom: 5px solid #545149;
+  color: #545149;
+  margin: 20px 0px 20px 0px;
+  
+}

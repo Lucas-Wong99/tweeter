@@ -24,3 +24,7 @@ textarea {
   color: #545149;
   margin: 20px 0px 20px 0px;
 }
+
+output {
+  font-family: 'Bungee', cursive;
+}

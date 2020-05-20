@@ -38,6 +38,7 @@ const renderTweets = function (data) {
 }
 
 const createTweetElement = function (data) {
+  const milliInDay = 86400000;
   const $tweet = `
       <article>
         <header>
@@ -51,7 +52,7 @@ const createTweetElement = function (data) {
           ${data.content.text} 
         </h4>
         <footer>
-          <p>${data.created_at}</p>
+          <p>${Math.floor((Date.now() / milliInDay) - (data.created_at / milliInDay))} days ago</p>
           <p>icons</p>
         </footer>
       </article>

@@ -1,9 +1,5 @@
 $(document).ready(function() {
   
-//grab the text area value
-//listen for key presses or changes
-// grab the text value of output
-//subtract the key press value form the output
  $("#tweet-text").on('keyup', function () {
   const $node = $(this);
 
@@ -20,11 +16,5 @@ $(document).ready(function() {
   });
   
 });
-
-
-
-
-
-
 
 });

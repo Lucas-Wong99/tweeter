@@ -2,12 +2,6 @@ const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
-
-const renderTweets = function (data) {
-  for (const tweet of data) {
-    $("#tweets-container").prepend(createTweetElement(tweet));
-  }
 };
 
 const createTweetElement = function ({
@@ -37,13 +31,19 @@ const createTweetElement = function ({
   return $tweet;
 };
 
+const renderTweets = function (data) {
+  for (const tweet of data) {
+    $("#tweets-container").prepend(createTweetElement(tweet));
+  }
+};
+
 const loadTweets = function() {
   $.getJSON("/tweets")
   .then(function(tweets) {
     $("#tweets-container").empty();
     renderTweets(tweets);
   });
-}
+};
 
 const handleFormSubmission = function(event) {
   event.preventDefault();
@@ -60,4 +60,4 @@ const handleFormSubmission = function(event) {
       loadTweets();
     });
   }
-}
+};

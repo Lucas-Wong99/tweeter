@@ -25,20 +25,18 @@ const data = [
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1461113959088
+    "created_at": 1461113959088   
   }
 ]
 
 const renderTweets = function (data) {
-  let results = '';
   for (const tweet of data) {
-    results += createTweetElement(tweet);
+    $('#tweets-container').append(createTweetElement(tweet));
   }
-  return $('#tweets-container').append(results);
 }
 
 const createTweetElement = function (data) {
-  const milliInDay = 86400000;
+  const milliSecsInDay = 86400000;
   const $tweet = `
       <article>
         <header>
@@ -52,7 +50,7 @@ const createTweetElement = function (data) {
           ${data.content.text} 
         </h4>
         <footer>
-          <p>${Math.floor((Date.now() / milliInDay) - (data.created_at / milliInDay))} days ago</p>
+          <p>${Math.floor((Date.now() / milliSecsInDay) - (data.created_at / milliSecsInDay))} days ago</p>
           <p>icons</p>
         </footer>
       </article>

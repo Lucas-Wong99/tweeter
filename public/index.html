@@ -25,9 +25,6 @@
     <!-- Tweet CSS-->
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
   </head>
 
   <body>
@@ -47,10 +44,10 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container" id="tweets-container">
+    <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets">
+        <form>
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-button">
@@ -59,8 +56,13 @@
           </div>
         </form>
       </section>
+      <section id="tweets-container">
+
+      </section>
     </main>
+      <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
   </body>
-</html>
+</html> 

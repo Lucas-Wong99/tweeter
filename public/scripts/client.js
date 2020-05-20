@@ -16,6 +16,10 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
+const renderTweets = function () {
+  
+}
+
 const createTweetElement = function (data) {
   const $tweet = `
   <article>

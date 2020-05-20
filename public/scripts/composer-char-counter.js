@@ -5,7 +5,6 @@ $(document).ready(function() {
 // grab the text value of output
 //subtract the key press value form the output
 
-
 // $("#tweet-text").change( function () {
 //   console.log($(this).val());
 // });

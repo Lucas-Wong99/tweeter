@@ -1,3 +1,14 @@
+.error-container {
+  border: 5px solid red;
+  margin-top: 20px;
+  display: none;
+}
+
+.error {
+  color: red;
+  padding-left: 40px;
+}
+
 form {
   display: flex;
   flex-direction: column;

@@ -19,11 +19,12 @@ $(document).ready(function (){
     event.preventDefault();
     const textBoxVal = $(this).find("#tweet-text").val();
     if (textBoxVal === "") {
-      alert("This tweet has no content!");
+      $('.error-container').slideDown().children().text("🛑Error: Your tweet had no content! Try again.🛑");
     } else if (textBoxVal.length > 140) {
-      alert("The length of your tweets must be less than 140 characters")
+      $('.error-container').slideDown().children().text("🛑Error: The length of your tweets must be less than 140 characters! Try again🛑");
     } else {
       const data = $(this).serialize();
+      $('.error-container').slideUp();
       $.post("/tweets", data, function(res, status) {
         console.log(status)
         loadTweets();
@@ -46,7 +47,11 @@ const renderTweets = function (data) {
   }
 };
 
-const createTweetElement = function ({user: {avatars, name, handle}, content: {text: contentText}, created_at}) {
+const createTweetElement = function ({
+  user: {avatars, name, handle},
+  content: {text: contentText},
+  created_at
+}) {
   const milliSecsInDay = 86400000;
   const $tweet = `
       <article>

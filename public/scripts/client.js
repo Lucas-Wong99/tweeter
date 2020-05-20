@@ -5,7 +5,16 @@
  */
 $(document).ready(function (){
   renderTweets(data);
-})
+
+  $('form').submit(function(event) {
+    event.preventDefault();
+    const data = $(this).serialize();
+    $.post("/tweets", data)
+    .then(function(res) {
+      console.log('Success', res);
+    });
+  });
+});
 
 const data = [
   {
@@ -34,11 +43,11 @@ const data = [
 
 const renderTweets = function (data) {
   for (const tweet of data) {
-    $('#tweets-container').append(createTweetElement(tweet));
+    $('#tweets-container').prepend(createTweetElement(tweet));
   }
 }
 
-const createTweetElement = function ({user: { avatars, name, handle}, content: {text: contentText}, created_at}) {
+const createTweetElement = function ({user: {avatars, name, handle}, content: {text: contentText}, created_at}) {
   const milliSecsInDay = 86400000;
   const $tweet = `
       <article>

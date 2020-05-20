@@ -3,6 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+$(document).ready(function (){
+  renderTweets(data);
+})
 
 const data = [
   {
@@ -35,22 +38,22 @@ const renderTweets = function (data) {
   }
 }
 
-const createTweetElement = function (data) {
+const createTweetElement = function ({user: { avatars, name, handle}, content: {text: contentText}, created_at}) {
   const milliSecsInDay = 86400000;
   const $tweet = `
       <article>
         <header>
           <div>
-            <img src="${data.user.avatars}" class="user-icon">
-            <h4>${data.user.name}</h4>
+            <img src="${avatars}" class="user-icon">
+            <h4>${name}</h4>
           </div>
-          <p class="tweet-tag">${data.user.handle}</p>
+          <p class="tweet-tag">${handle}</p>
         </header>
         <h4 class="tweet-content"> 
-          ${data.content.text} 
+          ${contentText} 
         </h4>
         <footer>
-          <p>${Math.floor((Date.now() / milliSecsInDay) - (data.created_at / milliSecsInDay))} days ago</p>
+          <p>${Math.floor((Date.now() / milliSecsInDay) - (created_at / milliSecsInDay))} days ago</p>
           <p>icons</p>
         </footer>
       </article>
@@ -58,4 +61,3 @@ const createTweetElement = function (data) {
   return $tweet;
 }
 
-renderTweets(data);

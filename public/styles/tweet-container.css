@@ -56,7 +56,6 @@ article footer {
 
 @media screen and (min-width: 1060px) {
   article {
-    max-width: 900px;
     min-width: 600px;
   }
 }

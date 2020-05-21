@@ -29,3 +29,12 @@ span {
 .fa-angle-double-down {
   color: red;
 }
+
+@media screen and (max-width: 540px) {
+  nav {
+    height: 130px;
+    padding: 0.5em;
+    flex-direction: column;
+    align-items: center;
+  }
+}

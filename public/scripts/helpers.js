@@ -64,3 +64,14 @@ const handleFormSubmission = function(event) {
     });
   }
 };
+
+const scrollHandler = function() {
+  const pixel = $(this).scrollTop();
+  if (pixel > 350) {
+    $("#scroll-button").show();
+    $(".compose").hide();
+  } else {
+    $("#scroll-button").hide();
+    $(".compose").show();
+  }
+};

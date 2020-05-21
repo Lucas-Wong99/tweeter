@@ -10,10 +10,13 @@ $(document).ready(function (){
   $("form").submit(handleFormSubmission);
   
   $(".compose").click(function () {
-    $(".new-tweet").slideToggle();  
+    $(".new-tweet").slideToggle(500);  
   });
 
-  $("window").on("scroll", function() {
-    $("#scroll-button").show()
+  $(document).scroll(scrollHandler);
+
+  $("#scroll-button").click(function() {
+    $(window).scrollTop(0);
+    $(".new-tweet").slideDown(500);
   });
 });

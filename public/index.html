@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
   </head>
-
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
@@ -39,40 +38,41 @@
         </div>
       </div> 
     </nav>
-
-    <header class="header">
-      <div>
-          <img src="/images/profile-hex.png" id="top-reference"> 
-      </div>
-      <br>
-      <div>
-          <h2>Lucas Wong</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error-container">
-          <h3 class="error"></h3>
+    <section class="all-content">
+      <header class="header">
+        <div>
+            <img src="/images/profile-hex.png" id="top-reference"> 
         </div>
-        <h2>Compose Tweet</h2>
-        <form>
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="tweet-button">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+        <br>
+        <div>
+            <h2>Lucas Wong</h2>
+        </div>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error-container">
+            <h3 class="error"></h3>
           </div>
-        </form>
-      </section>
-      <section id="tweets-container">
-
-      </section>
-      <button id="scroll-button">
-        <i class="fas fa-angle-double-up fa-2x"></i>
-      </button>
-    </main>
+          <h2>Compose Tweet</h2>
+          <form>
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="tweet-button">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container">
+  
+        </section>
+        <button id="scroll-button">
+          <i class="fas fa-angle-double-up fa-2x"></i>
+        </button>
+      </main>
+    </section>
       <!-- External JS -->
     <script src="https://kit.fontawesome.com/cd7e20452a.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>

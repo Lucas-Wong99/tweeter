@@ -2,7 +2,7 @@ article {
   display: flex;
   flex-direction: column;
   border: 5px solid #545149;
-  padding: 1.5em;
+  padding: 1em;
   margin: 40px 0px;
 }
 
@@ -26,17 +26,22 @@ article:hover {
 
 article header div {
   display: flex;
+  align-items: center;
 }
 
 .user-icon {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
+}
+
+.user-icon + h4 {
+  margin: 0;
 }
 
 .tweet-content {
   border-bottom: 5px solid #545149;
   padding: 1.5em;
-  margin-bottom: auto;
+  margin: auto 0px;
 }
 
 article footer {
@@ -47,4 +52,11 @@ article footer {
 .icons {
   height: 40px;
   margin-top: 24px;
+}
+
+@media screen and (min-width: 1060px) {
+  article {
+    max-width: 900px;
+    min-width: 600px;
+  }
 }

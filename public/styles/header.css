@@ -13,3 +13,10 @@ header div h2 {
   color: white;
   margin-top: 0;
 }
+
+@media screen and (min-width: 1060px) {
+  .header {
+    max-width: 500px;
+    margin: 40px;
+  }
+}

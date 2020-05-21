@@ -48,3 +48,15 @@ main {
   cursor: pointer;
   outline: none;
 }
+
+@media screen and (min-width: 1060px) {
+  .all-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 20px;
+  }
+  main {
+    align-items: center;
+    padding-left: 80px;
+  }
+}

@@ -23,7 +23,7 @@ const createTweetElement = function ({
           ${escape(contentText)} 
         </h4>
         <footer>
-          <p>${Math.floor((Date.now() / milliSecsInDay) - (created_at / milliSecsInDay))} days ago</p>
+          <p>${moment(created_at).fromNow()}</p>
           <p>icons</p>
         </footer>
       </article>

@@ -43,3 +43,8 @@ article footer {
   display: flex;
   justify-content: space-between;
 }
+
+.icons {
+  height: 40px;
+  margin-top: 24px;
+}

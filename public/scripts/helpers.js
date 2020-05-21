@@ -9,7 +9,6 @@ const createTweetElement = function ({
   content: {text: contentText},
   created_at
 }) {
-  const milliSecsInDay = 86400000;
   const $tweet = `
       <article>
         <header>
@@ -24,7 +23,11 @@ const createTweetElement = function ({
         </h4>
         <footer>
           <p>${moment(created_at).fromNow()}</p>
-          <p>icons</p>
+          <div class="icons">
+            <i class="fas fa-flag" fa-2x></i>
+            <i class="fas fa-retweet" fa-2x></i>
+            <i class="fas fa-heart" fa-2x></i>
+          </div>
         </footer>
       </article>
   `;

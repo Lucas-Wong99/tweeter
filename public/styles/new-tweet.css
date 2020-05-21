@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 .error-container {
   border: 5px solid red;
   margin-top: 20px;

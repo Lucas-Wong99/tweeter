@@ -12,4 +12,8 @@ $(document).ready(function (){
   $(".compose").click(function () {
     $(".new-tweet").slideToggle();  
   });
+
+  $("window").on("scroll", function() {
+    $("#scroll-button").show()
+  });
 });

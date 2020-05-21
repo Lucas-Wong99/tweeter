@@ -9,4 +9,7 @@ $(document).ready(function (){
 
   $("form").submit(handleFormSubmission);
   
+  $(".compose").click(function () {
+    $(".new-tweet").slideToggle();  
+  });
 });

@@ -50,10 +50,10 @@ const loadTweets = function() {
 
 const handleFormSubmission = function(event) {
   event.preventDefault();
-  const textBoxVal = $(this).find("#tweet-text").val();
-  if (textBoxVal === "") {
+  const textBoxVal = $(this).find("#tweet-text");
+  if (textBoxVal.val() === "") {
     $('.error-container').slideDown().children().text("🛑Error: Your tweet had no content! Try again.🛑");
-  } else if (textBoxVal.length > 140) {
+  } else if (textBoxVal.val().length > 140) {
     $('.error-container').slideDown().children().text("🛑Error: The length of your tweets must be less than 140 characters! Try again🛑");
   } else {
     const data = $(this).serialize();
@@ -62,6 +62,7 @@ const handleFormSubmission = function(event) {
       console.log(status)
       loadTweets();
     });
+    textBoxVal.val('');
   }
 };
 
@@ -74,4 +75,15 @@ const scrollHandler = function() {
     $("#scroll-button").hide();
     $(".compose").show();
   }
+};
+
+const handleClickEvent = function() {
+  $(".new-tweet").slideToggle(500);  
+  $("#tweet-text").focus();
+};
+
+const handleScrollButtonClickEvent = function() {
+  $(window).scrollTop(0);
+  $(".new-tweet").slideDown(500);  
+  $("#tweet-text").focus();
 };

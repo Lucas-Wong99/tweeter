@@ -9,14 +9,10 @@ $(document).ready(function (){
 
   $("form").submit(handleFormSubmission);
   
-  $(".compose").click(function () {
-    $(".new-tweet").slideToggle(500);  
-  });
+  $(".compose").click(handleClickEvent)
 
   $(document).scroll(scrollHandler);
 
-  $("#scroll-button").click(function() {
-    $(window).scrollTop(0);
-    $(".new-tweet").slideDown(500);
-  });
+  $("#scroll-button").click(handleScrollButtonClickEvent);
+
 });

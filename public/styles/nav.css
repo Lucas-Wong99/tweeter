@@ -10,7 +10,7 @@ nav {
 }
 
 span {
-  font-size: 2em;
+  font-size: 50px;
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
 }
@@ -21,11 +21,12 @@ span {
   align-items: center;
   cursor: pointer;
 }
-.compose h3 {
+.compose h3 { 
   margin: 0;
-  color: white;
+  color: #FFFFFF;
 }
 
+/* icon color */
 .fa-angle-double-down {
   color: red;
 }

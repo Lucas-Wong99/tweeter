@@ -9,7 +9,7 @@ $(document).ready(function (){
 
   $("form").submit(handleFormSubmission);
   
-  $(".compose").click(handleClickEvent)
+  $(".compose").click(handleComposeClickEvent)
 
   $(document).scroll(scrollHandler);
 

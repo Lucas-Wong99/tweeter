@@ -4,7 +4,7 @@ const escape =  function(str) {
   return div.innerHTML;
 };
 
-const createTweetElement = function ({
+const createTweetElement = function({
   user: {avatars, name, handle},
   content: {text: contentText},
   created_at
@@ -34,7 +34,7 @@ const createTweetElement = function ({
   return $tweet;
 };
 
-const renderTweets = function (data) {
+const renderTweets = function(data) {
   for (const tweet of data) {
     $("#tweets-container").prepend(createTweetElement(tweet));
   }
@@ -59,10 +59,10 @@ const handleFormSubmission = function(event) {
     const data = $(this).serialize();
     $('.error-container').slideUp();
     $.post("/tweets", data, function(res, status) {
-      console.log(status)
       loadTweets();
     });
     textBoxVal.val('');
+    $('output').text(140);
   }
 };
 
@@ -77,7 +77,7 @@ const scrollHandler = function() {
   }
 };
 
-const handleClickEvent = function() {
+const handleComposeClickEvent = function() {
   $(".new-tweet").slideToggle(500);  
   $("#tweet-text").focus();
 };

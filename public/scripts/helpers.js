@@ -1,3 +1,4 @@
+//A function to turn client inputs into safe text
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -56,11 +57,13 @@ const handleFormSubmission = function(event) {
   } else if (textBoxVal.val().length > 140) {
     $('.error-container').slideDown().children().text("🛑Error: The length of your tweets must be less than 140 characters! Try again🛑");
   } else {
+    //Serializes data in form to post
     const data = $(this).serialize();
     $('.error-container').slideUp();
     $.post("/tweets", data, function(res, status) {
       loadTweets();
     });
+    //Resets textbox
     textBoxVal.val('');
     $('output').text(140);
   }

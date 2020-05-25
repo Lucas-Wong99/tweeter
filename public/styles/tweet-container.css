@@ -42,6 +42,7 @@ article header div {
   border-bottom: 5px solid #545149;
   padding: 1.5em;
   margin: auto 0px;
+  overflow-wrap: break-word;
 }
 
 article footer {
@@ -57,5 +58,6 @@ article footer {
 @media screen and (min-width: 1060px) {
   article {
     min-width: 600px;
+    max-width: 900px;
   }
 }
